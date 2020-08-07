@@ -1,5 +1,5 @@
 ![JavaScript Logo](https://i.morioh.com/2020/01/06/2b34e42c3159.jpg) \
-<small> JavaScript Logo by i.morioh.com</small>
+<sub> JavaScript Logo by i.morioh.com</sub>
 
 # JavaScript evolution and Modern Syntaxis
 
@@ -10,6 +10,7 @@
 - [Brief History](#brief-history)
   - [Version list and releases dates](#version-list-and-releases-dates)
   - [Versions Evolution](#versions-evolution)
+- [Strict Mode](#strict-mode)
 - [Variables](#variables)
   - [let](#let)
   - [const](#const)
@@ -19,10 +20,15 @@
   - [Immediately invoked function expression (IIFE)](#immediately-invoked-function-expression-iife)
   - [Arrow Functions](#arrow-functions)
 - [Arrays](#arrays)
+  - [Traverse Arrays](#traverse-arrays)
+  - [Array Concat](#array-concat)
+  - [Array Reduce](#array-reduce)
+  - [Array Filter](#array-filter)
+  - [Array Find](#array-find)
 - [Objects](#objects)
-- [Map, Set, and More](#map-set-and-more)
 - [Promises](#promises)
 - [Async and Wait](#async-and-wait)
+- [Future](#future)
 - [References](#references)
 - [Tools](#tools)
 - [Author](#author)
@@ -44,6 +50,27 @@ _“An organization that creates standards for technologies.” - European Compu
 The first two versions were quickly released in the late 90s. The new browser competition generated that each browser added functionalities beyond ECMAScript standards. These additions brought a substantial technical fragmentation between browser and JavaScript compatibility. With the decline of Netscape, which was leading the development of JavaScript, the ES4 release was abandoned. For the next years, the committee controlling the proposal for ECMAScript Standard was Microsoft, Mozilla, Adobe, and Opera. The committee took years to agree on features and new standards for JavaScript, but in 2009 comes the major release ES5. This version became the most supported version of JavaScript. With the arrival of Google Chrome, the ECMAScript committee agreed to evolve JavaScript beyond the web browsers and make it a general-purpose language. The generalization of JavaScript gives this programming language a new life as one of the most dominant languages nowadays. This allowed JavaScript to be used to web pages, mobile apps, server-side, application, and many more.`[2]`
 
 **Next a list of the most useful features of JavaScript**
+
+# Strict Mode
+
+- `strict mode` was introduced in ES5 as an optional restrictive variant of JavaScript. The objective of `strict mode` is to eliminate sloppy code, JS silent errors. Also, it helps to JS run faster because the JS engine does not have to handle ambiguities in the code.
+
+- `strict mode` is using by adding `'use strict';` at the beginning of the JS document or in a specific line of part of the code.
+
+```JS
+// Whole-script strict mode
+'use strict';
+var v = "mode script!";
+```
+
+```JS
+function strict() {
+  // Function-level strict mode
+  'use strict';
+  return "strict mode function!  ";;
+}
+function notStrict() { return "no strict."; }
+```
 
 # Variables
 
@@ -124,7 +151,7 @@ Example: \
 
 # Functions
 
-- In javascript a `function` is a block of code that can be used multiple times, in different part of the code and this make the code reusable and easy to mantaine.
+- In javascript, a `function` is a block of code that can be used multiple times, in a different part of the code, and this makes the code reusable and easy to maintain.
 
 ```JS
  function myFunction(p1, p2) {
@@ -212,13 +239,109 @@ let test = x => x * 10;
 
 # Arrays
 
-# Objects
+- Every new version of JavaScript introduce new features to arrays and arrays manipulation. These are few of them
 
-# Map, Set, and More
+## Traverse Arrays
+
+```JS
+var list = [1, 2, 3];
+// classic array traverse
+for (var i = 0; i < list.length; ++i) {
+  console.log(list[0]);
+}
+// using foreach
+list.forEach((x) => {
+  console.log(x);
+});
+
+for (let i in list) {
+   console.log(i)
+}
+```
+
+Example: \
+![array loop](img/array_loop.gif)
+
+## Array Concat
+
+- using `concat()` was the way to merge one or more array. `concat()` was always returning a new array with the merged element
+- Now, we can do the same with `spread syntax` or `...`
+
+```JS
+var even = [2, 4, 6];
+var odds = [1, 3, 5];
+var numbers = even.concat(odds);
+console.log(numbers);
+//spread syntax
+var numbersDots = [...even, ...odds];
+```
+
+Example: \
+![array loop](img/array_concat.gif)
+
+## Array Reduce
+
+- `reduce()` executes the function provides and for each element of the array, the result is a single value
+
+```JS
+var list = [1, 2, 3, 4, 6];
+var reducer = (accumulator, currentValue) => accumulator + currentValue;
+var total = list.reduce(reducer);
+console.log(total);
+// initial value is 5, then the element of the array
+total = list.reduce(reducer, 5);
+console.log(total);
+// arrow function
+total = list.reduce((x, y) => {
+  x + y;
+});
+console.log(total);
+```
+
+Example: \
+![array loop](img/array_reduce.gif)
+
+## Array Filter
+
+- `filter()` will return all the element that match the argument or an empty array if it doesn't find any match
+
+```JS
+var list = [1, 2, 3];
+var x = list.filter(j => j % 2 == 1);
+console.log(x);
+
+var l = list.filter(j => j === 0);
+console.log(l);
+```
+
+Example: \
+![array filter](img/array_filter.gif)
+
+## Array Find
+
+- `find()` will return the first element that match the arguments, or undefined if it doesn't find it
+
+```JS
+var list = [1, 2, 3];
+var x = list.find(j => j % 2 == 1);
+console.log(x);
+
+var l = list.find(j => j === 0);
+console.log(l);
+```
+
+Example: \
+![array find](img/array_find.gif)
+
+# Objects
 
 # Promises
 
 # Async and Wait
+
+# Future
+
+JavaScript is taking the word with every new release, many more features that improve the experience as a software developer, and the speed and experience of the users on the internet.
 
 # References
 
@@ -230,6 +353,10 @@ let test = x => x * 10;
 1. https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 1. https://www.w3schools.com/js/js_arrow_function.asp
 1. http://adripofjavascript.com/blog/drips/an-introduction-to-iffes-immediately-invoked-function-expressions.html
+1. https://www.tutorialspoint.com/es6/es6_arrays.htm
+1. https://exploringjs.com/es6/ch_arrays.html
+1. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+1. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 # Tools
 

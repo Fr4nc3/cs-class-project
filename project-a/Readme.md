@@ -1,5 +1,5 @@
 ![JavaScript Logo](https://www.tutorialrepublic.com/lib/images/javascript-illustration.png)\
-<small>JavaScript Logo by tutorialrepublic.com</small>
+<sub>JavaScript Logo by tutorialrepublic.com</sub>
 
 # The 12 Concepts about JavaScript
 
@@ -92,7 +92,7 @@ There are several ways declare a varibale
 
 Example:\
 ![Let  Const example](img/let_const.gif) \
-<small>An error will appears when you try to re-assign a const variable</small>
+<sub>An error will appears when you try to re-assign a const variable</sub>
 
 ### typeof
 
@@ -257,7 +257,7 @@ console.log(Number("10.1"));
 console.log(Number("10.a"));
 ```
 
-<small>NaN means Not a Number</small>
+<sub>NaN means Not a Number</sub>
 
 Example: \
 ![number parse](img/number_parse.gif)
@@ -265,7 +265,6 @@ Example: \
 ## Arrays
 
 - Arrays variables thay can store multiples values. In JavaScript, an array can store different type of values in the same array.
-- Using `new Array()` is highly discoraged
 
 ```JS
 var strArray = ["Spain", "Brazil", "Argentina", "U.K."];
