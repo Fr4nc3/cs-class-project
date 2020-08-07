@@ -1,14 +1,40 @@
-![JavaScript Logo](https://www.tutorialrepublic.com/lib/images/javascript-illustration.png)
+![JavaScript Logo](https://www.tutorialrepublic.com/lib/images/javascript-illustration.png)\
+<small>JavaScript Logo by tutorialrepublic.com</small>
 
-###### figure 1. JavaScript Logo by tutorialrepublic.com
-
-# Javascript
+# The 12 Concepts about JavaScript
 
 JavaScript is one of the most popular languages globally, and it is most commonly used as the language that handles and renders dynamic features to the web pages on a web browser. In was created by Netscape in 1995 and standardized in 1997. Nowadays, JavaScript is the standard language for web applications and is supported by web-browsers such as Firefox, Safari, Chrome, and Edge, among others.
 
 _"JavaScript is officially maintained by ECMA (European Computer Manufacturers Association) as ECMAScript. ECMAScript 6 (or ES6) is the latest major version of the ECMAScript standard"_[1]
 
-# The 12 Concepts about JavaScript
+# Table of Contents
+
+- [The 12 Concepts about JavaScript](#the-12-concepts-about-javascript)
+- [Table of Contents](#table-of-contents)
+  - [Variables](#variables)
+    - [var, let, and const](#var-let-and-const)
+    - [typeof](#typeof)
+    - [Null and Undefined](#null-and-undefined)
+  - [Strings](#strings)
+  - [Numbers](#numbers)
+  - [Arrays](#arrays)
+  - [Objects](#objects)
+  - [Functions](#functions)
+  - [Operators](#operators)
+  - [Statement](#statement)
+    - [If Else Statement](#if-else-statement)
+    - [Switch statement](#switch-statement)
+  - [Loops](#loops)
+    - [For](#for)
+    - [For In](#for-in)
+    - [While](#while)
+    - [Do While](#do-while)
+  - [Global Objects](#global-objects)
+  - [DOM](#dom)
+  - [BOM](#bom)
+- [References](#references)
+- [Tools](#tools)
+- [Author](#author)
 
 JavaScript is easy to use and learn as a programming language. It can be used as scripting language or object-oriented to handle the client-side of the web browser, and more recent as the server-side with Node.js. This document will explain the basic concept associated with JavaScript.
 
@@ -25,15 +51,15 @@ _*For our examples, we will use the `console.log(varName)` that is a function th
 In all languages, variables are entities that are created to hold or store data values. These values can be anything such as string, numbers, objects, functions, arrays, or booleans. In other languages, when a variable is created, the type needs to be defined. However, in JavaScript, the type of the variable is not defined when the variable is created. Therefore, a variable can be created as a string and later become or re-assign to a number or other type.
 
 - Rules for Variables names;
-  - names can starts with letters or \$ and \_
+  - names can starts with letters or `$` and `_`
   - names are case sensitive i.e: x and X are not the same variable
   - there are reserved words that cannot be names such as JavaScript or keywords.
 
-### var let and const
+### var, let, and const
 
 There are several ways declare a varibale
 
-- using var keyword and
+- using var keyword
 
 ```JS
  var name;
@@ -64,11 +90,9 @@ There are several ways declare a varibale
  const country = 'USA';
 ```
 
-Example:
-
-![Let  Const example](img/let_const.gif)
-
-###### An error will appears when you try to re-assign a const variable
+Example:\
+![Let  Const example](img/let_const.gif) \
+<small>An error will appears when you try to re-assign a const variable</small>
 
 ### typeof
 
@@ -85,8 +109,7 @@ console.log(oneName);
 console.log(typeof oneName);
 ```
 
-Example:
-
+Example: \
 ![Type of Example](img/typeof.gif)
 
 ### Null and Undefined
@@ -103,8 +126,7 @@ console.log(example2);
 console.log(Boolean(example2))
 ```
 
-Example:
-
+Example: \
 ![null undefined ](img/null_undefined.gif)
 
 - While `null` and `undefined` are not the same and they are not interchangable, they share similarities. For instance, When they are compared with double equality (`==`), JavaScript return `true` because double equals(`==`) compares values after convert the variables to the common type. (we will back to `==` and `===`)
@@ -121,11 +143,8 @@ console.log(isNaN(1 + null));
 console.log(isNaN(1 + undefined));
 ```
 
-Example:
-
+Example: \
 ![null undefined ](img/null_undefined_comp.gif)
-
-###### example from https://developer.mozilla.org/
 
 ## Strings
 
@@ -148,8 +167,7 @@ var example2 = `${oneName} is before ${twoName}`;
 console.log(example2)
 ```
 
-Example:
-
+Example: \
 ![string arith](img/string_ar.gif)
 
 - The length of the string can be found using `length`
@@ -160,8 +178,7 @@ var example1 = oneName + " is before " + twoName;
 console.log(example1.length);
 ```
 
-Example:
-
+Example: \
 ![string length](img/string_length.gif)
 
 - A string variable has several methods associates and the more relevant are:
@@ -180,7 +197,6 @@ console.log(str.slice(0, 7));
 ```
 
 Example:
-
 ![string methods](img/string_methods.gif)
 
 ## Numbers
@@ -205,11 +221,10 @@ console.log(x + y + z);
 console.log(x + z + y);
 ```
 
-Example:
-
+Example: \
 ![number add ](img/number_add_con.gif)
 
-- JavaScript doesn't get confused `-, %, /, *` and it tries to convert strings to numbers in all numeric operations.
+- JavaScript doesn't get confused `-, %, /, *` and it tries to convert strings to numbers in all numeric operations. If one fo the variables is not an number it will return `NaN`
 
 ```JS
 var x = 100;
@@ -223,8 +238,7 @@ console.log(x - z);
 console.log(x - z - y);
 ```
 
-Example:
-
+Example: \
 ![string length](img/number_other_ops.gif)
 
 - There are three ways to convert string to numbers:
@@ -243,10 +257,9 @@ console.log(Number("10.1"));
 console.log(Number("10.a"));
 ```
 
-###### NaN means Not a Number
+<small>NaN means Not a Number</small>
 
-Example:
-
+Example: \
 ![number parse](img/number_parse.gif)
 
 ## Arrays
@@ -295,8 +308,6 @@ sr
 
 ### For In
 
-### For Of
-
 ### While
 
 ### Do While
@@ -315,23 +326,25 @@ sr
 
 ```
 
-### Tools for this document
-
-- Written with Markup
-- Hosted by Github
-- Gif by Giphy Capture
-- VSCode as IDE
-- Github desktop for Git respository
-- jsfiddle.net to host live code
-- Grammarly for proofreading
-
-##### Author
-
-##### Francia F. Riesco
-
-### References
+# References
 
 1. https://www.tutorialrepublic.com/javascript-tutorial/
 1. https://www.w3schools.com/jsref/
 1. https://codeburst.io/javascript-null-vs-undefined-20f955215a2
 1. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null
+
+# Tools
+
+- Written with Markdown
+- Hosted by Github
+- Gif by Giphy Capture
+- VSCode as IDE
+- Markdown All in One
+- Github desktop for Git respository
+- jsfiddle.net to host live code
+- Grammarly for proofreading
+
+# Author
+
+Francia Riesco \
+August 2020
