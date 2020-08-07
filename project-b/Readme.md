@@ -25,9 +25,6 @@
   - [Array Reduce](#array-reduce)
   - [Array Filter](#array-filter)
   - [Array Find](#array-find)
-- [Objects](#objects)
-- [Promises](#promises)
-- [Async and Wait](#async-and-wait)
 - [Future](#future)
 - [References](#references)
 - [Tools](#tools)
@@ -49,7 +46,7 @@ _“An organization that creates standards for technologies.” - European Compu
 
 The first two versions were quickly released in the late 90s. The new browser competition generated that each browser added functionalities beyond ECMAScript standards. These additions brought a substantial technical fragmentation between browser and JavaScript compatibility. With the decline of Netscape, which was leading the development of JavaScript, the ES4 release was abandoned. For the next years, the committee controlling the proposal for ECMAScript Standard was Microsoft, Mozilla, Adobe, and Opera. The committee took years to agree on features and new standards for JavaScript, but in 2009 comes the major release ES5. This version became the most supported version of JavaScript. With the arrival of Google Chrome, the ECMAScript committee agreed to evolve JavaScript beyond the web browsers and make it a general-purpose language. The generalization of JavaScript gives this programming language a new life as one of the most dominant languages nowadays. This allowed JavaScript to be used to web pages, mobile apps, server-side, application, and many more.`[2]`
 
-**Next a list of the most useful features of JavaScript**
+**Next a list of the most useful features of the latest JavaScript**
 
 # Strict Mode
 
@@ -332,12 +329,6 @@ console.log(l);
 
 Example: \
 ![array find](img/array_find.gif)
-
-# Objects
-
-# Promises
-
-# Async and Wait
 
 # Future
 
