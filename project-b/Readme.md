@@ -32,10 +32,10 @@
 
 # Brief History
 
-JavaScript(JS) is a compiled programming language known as the scripting languages for the web. JavaScript is a single-threaded language that supports object-oriented programming. It was initially developed by Netscape and standardized by ECMAScript. This scripting language was initially named Mocha, later LiveScript, and finally, JavaScript. In the beginning, all releases were called by a numeric value. However, after June 2015, ES6(6th version) name convention changed to ECMAScript 2015 (ES2015) to follow annual releases of the standard. The latest version released in June 2020, named ECMAScript 2020 (ES2020) or ES11.
+JavaScript(JS) is a compiled programming language known as the scripting languages for the web. JavaScript is a single-threaded language that supports object-oriented programming. It was initially developed by Netscape and standardized by ECMAScript. This scripting language was initially named Mocha, later LiveScript, and finally, JavaScript. In the beginning, all releases were called by a numeric value. However, after June 2015, ES6(6th version) name convention changed to ECMAScript 2015 (ES2015) to follow annual releases of the standard. The latest version released in June 2020, named ECMAScript 2020 (ES2020) or ES11.<sup>1</sup>
 
 ![JavaScript Version List](https://miro.medium.com/max/373/1*wd1d5oHP9mJaj6sLS6F83w.jpeg)\
-_“An organization that creates standards for technologies.” - European Computer Manufacturers Association (ECMA)_
+_“An organization that creates standards for technologies.” - European Computer Manufacturers Association (ECMA)<sup>1</sup>_
 
 ## Version list and releases dates
 
@@ -44,7 +44,7 @@ _“An organization that creates standards for technologies.” - European Compu
 
 ## Versions Evolution
 
-The first two versions were quickly released in the late 90s. The new browser competition generated that each browser added functionalities beyond ECMAScript standards. These additions brought a substantial technical fragmentation between browser and JavaScript compatibility. With the decline of Netscape, which was leading the development of JavaScript, the ES4 release was abandoned. For the next years, the committee controlling the proposal for ECMAScript Standard was Microsoft, Mozilla, Adobe, and Opera. The committee took years to agree on features and new standards for JavaScript, but in 2009 comes the major release ES5. This version became the most supported version of JavaScript. With the arrival of Google Chrome, the ECMAScript committee agreed to evolve JavaScript beyond the web browsers and make it a general-purpose language. The generalization of JavaScript gives this programming language a new life as one of the most dominant languages nowadays. This allowed JavaScript to be used to web pages, mobile apps, server-side, application, and many more.`[2]`
+The first two versions were quickly released in the late 90s. The new browser competition generated that each browser added functionalities beyond ECMAScript standards. These additions brought a substantial technical fragmentation between browser and JavaScript compatibility. With the decline of Netscape, which was leading the development of JavaScript, the ES4 release was abandoned. For the next years, the committee controlling the proposal for ECMAScript Standard was Microsoft, Mozilla, Adobe, and Opera. The committee took years to agree on features and new standards for JavaScript, but in 2009 comes the major release ES5. This version became the most supported version of JavaScript. With the arrival of Google Chrome, the ECMAScript committee agreed to evolve JavaScript beyond the web browsers and make it a general-purpose language. The generalization of JavaScript gives this programming language a new life as one of the most dominant languages nowadays. This allowed JavaScript to be used to web pages, mobile apps, server-side, application, and many more.<sup>2</sup>
 
 **Next a list of the most useful features of the latest JavaScript**
 
@@ -332,7 +332,7 @@ Example: \
 
 # Future
 
-JavaScript is taking the word with every new release, many more features that improve the experience as a software developer, and the speed and experience of the users on the internet.
+JavaScript is taking the word with every new release. Indeed, many excellent features were left out of this list. Many more will come with new releases. Moreover, something is manifest, and JavaScript has evolved to improve the coding experience for software developers, and the speed and UX experience of the users on the internet.
 
 # References
 
