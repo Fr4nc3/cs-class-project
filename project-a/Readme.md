@@ -24,10 +24,6 @@ _"JavaScript is officially maintained by ECMA (European Computer Manufacturers A
     - [Comparison Operators](#comparison-operators)
     - [Conditional (Ternary) Operator](#conditional-ternary-operator)
     - [Logical Operators](#logical-operators)
-    - [Bitwise Operators](#bitwise-operators)
-    - [typeof Operator](#typeof-operator)
-    - [delete Operator](#delete-operator)
-    - [in Operator](#in-operator)
   - [Objects](#objects)
   - [Functions](#functions)
   - [Statement](#statement)
@@ -391,10 +387,11 @@ Example: \
 ### String Operators
 
 - In JavaScript, `+` add operator is used to concatenate two or more string.
-- New version of JavaScript use template interpolation `${}` rather than `+` (as mentioned in String manipulatio as variable)
-  Table: \
-  ![operator string](img/op_string.png)\
-  <sub>courtesy of w3schools.com<sup>5</sup></sup>
+- New version of JavaScript use template interpolation `${}` rather than `+` (as mentioned in String manipulation as variable).
+
+Table: \
+![operator string](img/op_string.png)\
+<sub>courtesy of w3schools.com<sup>5</sup></sup>
 
 ```JS
 var oneName = "one";
@@ -410,33 +407,67 @@ Example: \
 
 ### Comparison Operators
 
-Table: \
+- they are used in logical statements to determine `equality` or `difference` between values. Moreover, they return boolean `true` or `false` depending the results<sup>5</sup>.
+
+Table: when `x = 5` \
 ![operator comparison](img/op_comp.png)\
 <sub>courtesy of w3schools.com<sup>5</sup></sup>
 
+```JS
+var x = 5;
+console.log("x == 8", x == 8);
+console.log("x == 5", x == 5);
+console.log('x == "5"', x == "5");
+console.log("x === 5", x === 5);
+console.log('x === "5"', x === "5");
+console.log("x != 8", x != 8);
+console.log("x != 5", x != 5);
+console.log('x != "5"', x != "5");
+console.log("x !== 8", x !== 8);
+console.log("x !== 5", x !== 5);
+console.log('x !== "5"', x !== "5");
+console.log("x > 8", x > 8);
+console.log("x < 8", x < 8);
+console.log("x > 5", x > 5);
+console.log("x < 5", x < 5);
+console.log("x >= 8", x >= 8);
+console.log("x <= 8", x <= 8);
+console.log("x >= 5", x >= 5);
+console.log("x <= 5", x <= 5);
+```
+
+Example: \
+![operator comparison](img/op_comp.gif)
+
 ### Conditional (Ternary) Operator
+
+- This operator assigns a value to a variable based on a condition<sup>5</sup>. Moreover, this operator is an easy way to reduce the amount of code and syntax. (see `If Else Statement`)
 
 Table: \
 ![operator conditional](img/op_tern.png)\
 <sub>courtesy of w3schools.com<sup>5</sup></sup>
+
+```JS
+var isSpanish = true;
+// if / else simplified
+var name = isSpanish ? "hola" : "hello";
+console.log(name);
+// if variable exist
+var oneName = name ? name : "noname";
+console.log(name);
+// even shorter version pf if variable exist
+var twoName = name ?? "noname";
+console.log(twoName);
+```
+
+Example: \
+![operator conditional](img/op_tern.gif)
 
 ### Logical Operators
 
 Table: \
 ![operator logic](img/op_logic.png)\
 <sub>courtesy of w3schools.com<sup>5</sup></sup>
-
-### Bitwise Operators
-
-Table: \
-![operator bitwise](img/op_binary.png)\
-<sub>courtesy of w3schools.com<sup>5</sup></sup>
-
-### typeof Operator
-
-### delete Operator
-
-### in Operator
 
 ## Objects
 
