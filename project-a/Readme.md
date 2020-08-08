@@ -34,7 +34,12 @@ _"JavaScript is officially maintained by ECMA (European Computer Manufacturers A
     - [For In](#for-in)
     - [While](#while)
     - [Do While](#do-while)
-  - [Global Objects](#global-objects)
+  - [Globals](#globals)
+    - [Global Properties](#global-properties)
+    - [Global Functions](#global-functions)
+    - [Global Objects](#global-objects)
+      - [MATH](#math)
+      - [JSON](#json)
   - [DOM](#dom)
   - [BOM](#bom)
 - [References](#references)
@@ -471,6 +476,45 @@ Table: \
 
 ## Objects
 
+- Objects are variables that can contain many values and these values are call properties.
+- values are written as pair of `name:value` AKA `key:value`.
+- `delete` remove property
+- An object can have functions as properties, to access other properties inside a object function, you need to use `this`. and `this` is the object itself.
+
+```JS
+var obj = {
+  firstName: "Francia",
+  lastName: "Riesco",
+};
+console.log(obj);
+```
+
+```JS
+var obj = {}; // empty object
+// add propertie later
+obj["firstName"] = "Francia";
+obj.lastName = "Riesco";
+obj.age = 30;
+console.log(obj);
+// remove property
+delete obj.firstName;
+console.log(obj);
+```
+
+```JS
+var obj = {
+  firstName: "Francia",
+  lastName: "Riesco",
+   fullName: function () {
+    return `${this.firstName}  ${this.lastName}`;
+  },
+};
+console.log(obj.fullName());
+```
+
+Example: \
+![object](img/object.gif)
+
 ## Functions
 
 - A function is a block of code that performs a task, it can be reused, and they are practical for not repeating code or creating a compact logic of code that is easy to read and organize.
@@ -491,7 +535,57 @@ Table: \
 
 ### Do While
 
-## Global Objects
+## Globals
+
+- Global functions, properties and objects that can be used in any place in the code. They are built-in JavaScripts elements.
+
+### Global Properties
+
+- `Infinity` _A numeric value that represents positive/negative infinity_<sup>6</sup>.
+- `NaN` Not-a-Number
+- `undefined` _Indicates that a variable has not been assigned a value_<sup>6</sup>.
+
+### Global Functions
+
+- Convert variables
+  - `Number()` converted the argument to a number, it doesn't convert when there is letter or other character
+  - `parseFloat()` Parses the argument and returns a floating number
+  - `parseInt()` Parses its argument and returns an integer
+  - `String()` convert any value to string
+
+```JS
+console.log(parseInt("10.1"));
+console.log(parseFloat("10.1"));
+console.log(Number("10.1"));
+console.log(String(10));
+```
+
+Example: \
+![Global Functions](img/global_methods.gif)
+
+### Global Objects
+
+#### MATH
+
+- Some Properties
+- `Math.PI` PI (approx. 3.14)
+- `Math.E` Euler's number (approx. 2.718)
+- `Math.LN2` natural logarithm of 2 (approx. 0.693)
+- `Math.LN10` natural logarithm of 10 (approx. 2.302)
+
+```JS
+console.log(Math.PI);
+console.log(Math.E);
+console.log(Math.LN2);
+console.log(Math.LN10);
+```
+
+Example: \
+![Global Math](img/global_math.gif)
+
+- Some Methods
+
+#### JSON
 
 ## DOM
 
@@ -512,6 +606,7 @@ Table: \
 1. https://codeburst.io/javascript-null-vs-undefined-20f955215a2
 1. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null
 1. https://www.w3schools.com/jsref/jsref_operators.asp
+1. https://www.w3schools.com/jsref/jsref_obj_global.asp
 
 # Tools
 
