@@ -385,7 +385,7 @@ var y = 2;
 console.log(" x += y", (x += y)); // and y to x and update x
 console.log("x -= y", (x -= y)); // rest x to y and update x
 console.log("x *= y", (x *= y)); // multiply x and y and update x
-console.log("x /= y", (x /= y)); // divived x and y and update x
+console.log("x /= y", (x /= y)); // divided x and y and update x
 console.log("x %= y", (x %= y)); // get the module x and y and update x
 ```
 
@@ -463,7 +463,7 @@ console.log(name);
 // if variable exist
 var oneName = name ? name : "noname";
 console.log(name);
-// even shorter version pf if variable exist
+// even shorter version of if variable exist
 var twoName = name ?? "noname";
 console.log(twoName);
 ```
@@ -577,7 +577,7 @@ Example: \
 
 ## Statement
 
-- In JavaScript we can weite code that will perform different depending of a logical condition. If the evaluated expression is true will perform one action and false another, when you have more than two options, you can use switch stament<sup>10</sup>.
+- In JavaScript we can write code that will perform different depending of a logical condition. If the evaluated expression is `true` will perform one action and false another, when you have more than two options, you can use switch stament<sup>10</sup>.
 
 ### If Else... Statement
 
@@ -596,6 +596,8 @@ if(condition) {
 } else {
     // Code if condition is false
 }
+
+// if else if else condition
 if(conditionA) {
     // Code if conditionA is true
 } else if(conditionB) {
