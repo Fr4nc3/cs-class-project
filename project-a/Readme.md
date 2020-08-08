@@ -198,11 +198,11 @@ Example: \
 
 ```JS
 var str = 'francia riesco homework was good'; // =)
-console.log(str.indexOf('r'));
-console.log(str.indexOf('y'));
-console.log(str.includes('r'));
-console.log(str.split(' '));
-console.log(str.slice(0, 7));
+console.log(str.indexOf('r')); // return 1
+console.log(str.indexOf('y')); // return -1
+console.log(str.includes('r')); // return true
+console.log(str.split(' ')); // convert string in array
+console.log(str.slice(0, 7)); // get a subsctring from 0 to 7
 ```
 
 Example:
@@ -224,10 +224,10 @@ var x = 100;
 var y = 50;
 var z = "80";
 
-console.log(x + y);
-console.log(x + z);
-console.log(x + y + z);
-console.log(x + z + y);
+console.log(x + y); // add x and y
+console.log(x + z); // concat x and z, JS convert first x to string
+console.log(x + y + z); // concat x, y, z, JS convert x,y to string
+console.log(x + z + y); // concat x, y, z, JS convert x,y to string
 ```
 
 Example: \
@@ -240,11 +240,11 @@ var x = 100;
 var y = 50;
 var z = "80";
 
-console.log(x / z);
-console.log(x * z);
-console.log(x % z);
-console.log(x - z);
-console.log(x - z - y);
+console.log(x / z); // divide x by z, JS convert Z to number
+console.log(x * z); // multiply x by z , JS convert Z to number
+console.log(x % z); // get the reminder of x by z , JS convert Z to number
+console.log(x - z); // rest x by z
+console.log(x - z - y); // rest x z and z , JS convert Z to number
 ```
 
 Example: \
@@ -256,14 +256,14 @@ Example: \
   - `parseInt()` Parses its argument and returns an integer
 
 ```JS
-console.log(parseInt("10.1"));
-console.log(parseInt("10.q"));
+console.log(parseInt("10.1")); // parse 10.1 to integer 10
+console.log(parseInt("10.q"));// parse 10.q to integer 10
 
-console.log(parseFloat("10.1"));
-console.log(parseFloat("10.a"));
+console.log(parseFloat("10.1"));// parse 10.1 to decimal 10.1
+console.log(parseFloat("10.a"));// parse 10.a to decimal 10
 
-console.log(Number("10.1"));
-console.log(Number("10.a"));
+console.log(Number("10.1")); // convert 10.1 to decimal 10.1
+console.log(Number("10.a")); // unable to conver return NaN
 ```
 
 <sub>NaN means Not a Number</sub>
@@ -276,11 +276,11 @@ Example: \
 - Arrays variables thay can store multiples values. In JavaScript, an array can store different type of values in the same array.
 
 ```JS
-var strArray = ["Spain", "Brazil", "Argentina", "U.K."];
-var newArray = new Array("California", "Illinois", "Iowa");
-var numArray = [1, 2, 3, 4];
-var mixArray = ["Spain", 6, "U.K", 19];
-var emptyArray = [];
+var strArray = ["Spain", "Brazil", "Argentina", "U.K."]; // create array with 4 elements
+var newArray = new Array("California", "Illinois", "Iowa");// initialize array as new Array and the lements
+var numArray = [1, 2, 3, 4]; // array of numbers
+var mixArray = ["Spain", 6, "U.K", 19]; // array of string and numbers
+var emptyArray = []; // empty array
 ```
 
 - We can access Arrays to elements by indexes
@@ -296,18 +296,24 @@ var emptyArray = [];
 ```JS
 var countries = ["Spain", "Brazil", "Argentina", "U.K."];
 console.log("countries length", countries.length);
-countries[0] = "Sweden";
-countries.push("France");
+
+countries[0] = "Sweden"; // update first elemment with sweden
+
+countries.push("France"); // add new element France at the end of the array
 console.log(countries);
-countries.pop();
+
+countries.pop();// remove the last element (france)
 console.log(countries);
-countries.unshift("Germany");
+
+countries.unshift("Germany"); // add Germany to the beginning
 console.log(countries);
-countries.shift();
+
+countries.shift();// remove the first element (germany)
 console.log(countries);
-console.log(countries.join(","));
-console.log(typeof countries);
-console.log(Array.isArray(countries));
+
+console.log(countries.join(","));// convert array in string
+console.log(typeof countries); // return object
+console.log(Array.isArray(countries)); // return true bc it is array
 ```
 
 Example: \
@@ -352,16 +358,16 @@ Table: \
 ```JS
 var x = 5;
 var y = 2;
-console.log("5 + 2:", 5 + 2);
-console.log("5 - 2:", 5 - 2);
-console.log("x + y:", x + y);
-console.log("x - y:", x - y);
-console.log("x * y:", x * y);
-console.log("x ** y:", x ** y);
-console.log("x / y:", x / y);
-console.log("x % y:", x % y);
-console.log("++x:", ++x);
-console.log("--x:", --x);
+console.log("5 + 2:", 5 + 2); // add two numbers
+console.log("5 - 2:", 5 - 2); // rest two numbers
+console.log("x + y:", x + y); // add two variables
+console.log("x - y:", x - y); // rest two variables
+console.log("x * y:", x * y); // x multiplied by y
+console.log("x ** y:", x ** y); // x power to y
+console.log("x / y:", x / y); // x divided by y
+console.log("x % y:", x % y); // remainder of div between x and y
+console.log("++x:", ++x); // add one to x
+console.log("--x:", --x); // remove one to x
 ```
 
 Example: \
@@ -378,11 +384,11 @@ Table: \
 ```JS
 var x = 5;
 var y = 2;
-console.log(" x += y", (x += y));
-console.log("x -= y", (x -= y));
-console.log("x *= y", (x *= y));
-console.log("x /= y", (x /= y));
-console.log("x %= y", (x %= y));
+console.log(" x += y", (x += y)); // and y to x and update x
+console.log("x -= y", (x -= y)); // rest x to y and update x
+console.log("x *= y", (x *= y)); // multiply x and y and update x
+console.log("x /= y", (x /= y)); // divived x and y and update x
+console.log("x %= y", (x %= y)); // get the module x and y and update x
 ```
 
 Example: \
@@ -421,9 +427,9 @@ Table: when `x = 5` \
 var x = 5;
 console.log("x == 8", x == 8);
 console.log("x == 5", x == 5);
-console.log('x == "5"', x == "5");
-console.log("x === 5", x === 5);
-console.log('x === "5"', x === "5");
+console.log('x == "5"', x == "5"); // true equal value
+console.log("x === 5", x === 5); // true equal type equal value
+console.log('x === "5"', x === "5"); // false no equal type
 console.log("x != 8", x != 8);
 console.log("x != 5", x != 5);
 console.log('x != "5"', x != "5");
@@ -482,13 +488,13 @@ Table: when `x = 6`, `y = 3`\
 ```JS
 var x = 6;
 var y = 3;
-console.log("x < 10", x < 10);
-console.log("y > 1", y > 1);
-console.log("x < 10 && y > 1", x < 10 && y > 1);
-console.log("x == 5", x == 5);
-console.log("y > 2", y > 2);
-console.log("x == 6 || y > 2", x == 6 || y > 2);
-console.log("!(x == y)", !(x == y));
+console.log("x < 10", x < 10); // true
+console.log("y > 1", y > 1); // true
+console.log("x < 10 && y > 1", x < 10 && y > 1); // true
+console.log("x == 5", x == 5); // false
+console.log("y > 2", y > 2); // true
+console.log("x == 6 || y > 2", x == 6 || y > 2); //first is false, second is true then all true
+console.log("!(x == y)", !(x == y)); // the result inside the parentheses is false and !false is true
 ```
 
 Example: \
@@ -620,10 +626,10 @@ Example: \
 #### MATH
 
 - Some Properties
-- `Math.PI` PI (approx. 3.14)
-- `Math.E` Euler's number (approx. 2.718)
-- `Math.LN2` natural logarithm of 2 (approx. 0.693)
-- `Math.LN10` natural logarithm of 10 (approx. 2.302)
+  - `Math.PI` PI (approx. 3.14)
+  - `Math.E` Euler's number (approx. 2.718)
+  - `Math.LN2` natural logarithm of 2 (approx. 0.693)
+  - `Math.LN10` natural logarithm of 10 (approx. 2.302)
 
 ```JS
 console.log(Math.PI);
@@ -646,18 +652,22 @@ Example: \
   - `Math.random()` _returns a random number between 0 (inclusive), and 1 (exclusive)<sup>8</sup>_.
 
 ```JS
-console.log(Math.round(5.6));
-console.log(Math.pow(5, 2));
-console.log(Math.sqrt(25));
-console.log(Math.floor(4.5));
-console.log(Math.floor(4.7));
-console.log(Math.floor(4.3));
-console.log(Math.ceil(4.5));
-console.log(Math.ceil(4.7));
-console.log(Math.ceil(4.3));
-console.log(Math.max(4, 10));
-console.log(Math.min(4, 10));
-console.log(Math.random());
+console.log(Math.round(5.6)); // 6
+console.log(Math.pow(5, 2)); // 25
+console.log(Math.sqrt(25)); // 5
+
+console.log(Math.floor(4.5)); // 4
+console.log(Math.floor(4.7)); // 4
+console.log(Math.floor(4.3)); // 4
+
+console.log(Math.ceil(4.5)); // 5
+console.log(Math.ceil(4.7)); // 5
+console.log(Math.ceil(4.3)); // 5
+
+console.log(Math.max(4, 10)); // 10
+console.log(Math.min(4, 10)); // 4
+
+console.log(Math.random()); // number between 0 or 0.99999999
 ```
 
 Example: \
@@ -678,8 +688,10 @@ var obj = {
   lastName: "Riesco",
   age: 30,
 };
+// convert JS object to String JSON
 var flatObject = JSON.stringify(obj);
 console.log(flatObject);
+// convert String JSON to JS object
 var parsedObject = JSON.parse(flatObject);
 console.log(parsedObject);
 ```
@@ -688,6 +700,8 @@ Example: \
 ![JSON](img/json_obj.gif)
 
 # Conclusion
+
+-
 
 # References
 
