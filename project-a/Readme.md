@@ -5,12 +5,11 @@
 
 JavaScript is one of the most popular languages globally, and it is most commonly used as the language that handles and renders dynamic features to the web pages on a web browser. In was created by Netscape in 1995 and standardized in 1997. Nowadays, JavaScript is the standard language for web applications and is supported by web-browsers such as Firefox, Safari, Chrome, and Edge, among others.
 
-_"JavaScript is officially maintained by ECMA (European Computer Manufacturers Association) as ECMAScript. ECMAScript 6 (or ES6) is the latest major version of the ECMAScript standard"_ `[1]`
+_"JavaScript is officially maintained by ECMA (European Computer Manufacturers Association) as ECMAScript. ECMAScript 6 (or ES6) is the latest major version of the ECMAScript standard"_ <sup>1</sup>
 
-# Table of Contents
+**Table of Contents**
 
 - [The 12 Concepts about JavaScript](#the-12-concepts-about-javascript)
-- [Table of Contents](#table-of-contents)
   - [Variables](#variables)
     - [var, let, and const](#var-let-and-const)
     - [typeof](#typeof)
@@ -18,9 +17,19 @@ _"JavaScript is officially maintained by ECMA (European Computer Manufacturers A
   - [Strings](#strings)
   - [Numbers](#numbers)
   - [Arrays](#arrays)
+  - [Operators](#operators)
+    - [Arithmetic Operators](#arithmetic-operators)
+    - [Assignment Operators](#assignment-operators)
+    - [String Operators](#string-operators)
+    - [Comparison Operators](#comparison-operators)
+    - [Conditional (Ternary) Operator](#conditional-ternary-operator)
+    - [Logical Operators](#logical-operators)
+    - [Bitwise Operators](#bitwise-operators)
+    - [typeof Operator](#typeof-operator)
+    - [delete Operator](#delete-operator)
+    - [in Operator](#in-operator)
   - [Objects](#objects)
   - [Functions](#functions)
-  - [Operators](#operators)
   - [Statement](#statement)
     - [If Else Statement](#if-else-statement)
     - [Switch statement](#switch-statement)
@@ -155,7 +164,7 @@ var oneName = 'one';
 var twoName = "two";
 ```
 
-- String can be concatenated using `+` or using a more modern approach of template strings iteration `${}`
+- String can be concatenated using `+` or using a more modern approach of Template literals that allows embedded expressions `${}`
 
 ```JS
 var oneName = "one"
@@ -285,15 +294,153 @@ var emptyArray = [];
   - `typeof` an Array will return `object` and we need to use `Array.isArray()` to find if we are dealing with an Array
 
 ```JS
-var strArray = ["Spain", "Brazil", "Argentina", "U.K."];
-sr
+var countries = ["Spain", "Brazil", "Argentina", "U.K."];
+console.log("countries length", countries.length);
+countries[0] = "Sweden";
+countries.push("France");
+console.log(countries);
+countries.pop();
+console.log(countries);
+countries.unshift("Germany");
+console.log(countries);
+countries.shift();
+console.log(countries);
+console.log(countries.join(","));
+console.log(typeof countries);
+console.log(Array.isArray(countries));
 ```
+
+Example: \
+![array prop](img/array_prop.gif)
+
+- looping the array
+- there are several ways to loop elements of the array. Moreover, lastest version of JavaScript, introduced simple way to do it
+
+```JS
+var countries = ["Spain", "Brazil", "Argentina", "U.K."];
+// classic
+for (var i = 0; i < countries.length; i++) {
+  console.log(countries[i]);
+}
+console.log('---');
+// in
+for (var i in countries) {
+  console.log(countries[i]);
+}
+console.log('---');
+// of: it doesn't care about the index of the element
+for (var country of countries) {
+  console.log(country);
+}
+```
+
+Example: \
+![array loop](img/array_loop.gif)
+
+## Operators
+
+- In javascript, operators classified as `Arithmetic Operators`, `Assignment Operators`, `String Operators`, `Comparison Operators`, `Conditional (Ternary) Operator`, `Logical Operators`, `Bitwise Operators`, `typeof Operator`, `delete Operator`, `in Operator`. Operators are the most useful elements in JavaScript helping, the software developer write the logic and functionality of her code.
+
+### Arithmetic Operators
+
+- They are used to perform arithmetic between variables and/or values<sup>5</sup>.
+
+Table: \
+![operator arithmetic](img/op_arith.png)\
+<sub>courtesy of w3schools.com<sup>5</sup></sup>
+
+```JS
+var x = 5;
+var y = 2;
+console.log("5 + 2:", 5 + 2);
+console.log("5 - 2:", 5 - 2);
+console.log("x + y:", x + y);
+console.log("x - y:", x - y);
+console.log("x * y:", x * y);
+console.log("x ** y:", x ** y);
+console.log("x / y:", x / y);
+console.log("x % y:", x % y);
+console.log("++x:", ++x);
+console.log("--x:", --x);
+```
+
+Example: \
+![operator arithmetic](img/op_arith.gif)
+
+### Assignment Operators
+
+- Assignment operators are used to assign values to JavaScript variables<sup>5</sup>. `=` is one of the most important operators, we use to create variables, re-assign values and many others.
+
+Table: \
+![operator assign](img/op_assign.png)\
+<sub>courtesy of w3schools.com<sup>5</sup></sup>
+
+```JS
+var x = 5;
+var y = 2;
+console.log(" x += y", (x += y));
+console.log("x -= y", (x -= y));
+console.log("x *= y", (x *= y));
+console.log("x /= y", (x /= y));
+console.log("x %= y", (x %= y));
+```
+
+Example: \
+![operator assign](img/op_assign.gif)
+
+### String Operators
+
+- In JavaScript, `+` add operator is used to concatenate two or more string.
+- New version of JavaScript use template interpolation `${}` rather than `+` (as mentioned in String manipulatio as variable)
+  Table: \
+  ![operator string](img/op_string.png)\
+  <sub>courtesy of w3schools.com<sup>5</sup></sup>
+
+```JS
+var oneName = "one";
+var twoName = "two";
+var example = oneName + " before than " + twoName;
+console.log(example);
+oneName += " before than " + twoName;
+console.log(oneName);
+```
+
+Example: \
+![operator string](img/op_string.gif)
+
+### Comparison Operators
+
+Table: \
+![operator comparison](img/op_comp.png)\
+<sub>courtesy of w3schools.com<sup>5</sup></sup>
+
+### Conditional (Ternary) Operator
+
+Table: \
+![operator conditional](img/op_tern.png)\
+<sub>courtesy of w3schools.com<sup>5</sup></sup>
+
+### Logical Operators
+
+Table: \
+![operator logic](img/op_logic.png)\
+<sub>courtesy of w3schools.com<sup>5</sup></sup>
+
+### Bitwise Operators
+
+Table: \
+![operator bitwise](img/op_binary.png)\
+<sub>courtesy of w3schools.com<sup>5</sup></sup>
+
+### typeof Operator
+
+### delete Operator
+
+### in Operator
 
 ## Objects
 
 ## Functions
-
-## Operators
 
 - A function is a block of code that performs a task, it can be reused, and they are practical for not repeating code or creating a compact logic of code that is easy to read and organize.
 
@@ -333,6 +480,7 @@ sr
 1. https://www.w3schools.com/jsref/
 1. https://codeburst.io/javascript-null-vs-undefined-20f955215a2
 1. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null
+1. https://www.w3schools.com/jsref/jsref_operators.asp
 
 # Tools
 
