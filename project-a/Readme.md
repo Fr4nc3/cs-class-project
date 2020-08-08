@@ -657,6 +657,56 @@ Example: \
 ### Switch statement
 
 - `switch statement` to select one of many code blocks to be executed.
+- `break` is used to single out each case block (other blocks are executed);
+- `default` is the last expression and it is executes if nothing else matched
+
+```JS
+// simple implementation
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+// z and y are grouped and execute same code block
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case z:
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+```
+
+```JS
+var browser = "Chrome";
+switch (browser) {
+  case "Edge":
+  case "Safari":
+    console.log("What are you doing?");
+    break;
+  case "Chrome":
+  case "Firefox":
+    console.log("We support these browsers too");
+    break;
+  case "Opera":
+    console.log("Wut?");
+    break;
+  default:
+    console.log("how can you see this page?");
+}
+```
+
+Example: \
+![switch statement](img/switch.gif)
 
 ## Loops
 
