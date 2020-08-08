@@ -27,7 +27,7 @@ _"JavaScript is officially maintained by ECMA (European Computer Manufacturers A
   - [Objects](#objects)
   - [Functions](#functions)
   - [Statement](#statement)
-    - [If Else Statement](#if-else-statement)
+    - [If Else... Statement](#if-else-statement)
     - [Switch statement](#switch-statement)
   - [Loops](#loops)
     - [For](#for)
@@ -345,7 +345,7 @@ Example: \
 
 ## Operators
 
-- In javascript, operators classified as `Arithmetic Operators`, `Assignment Operators`, `String Operators`, `Comparison Operators`, `Conditional (Ternary) Operator`, `Logical Operators`, `Bitwise Operators`, `typeof Operator`, `delete Operator`, `in Operator`. Operators are the most useful elements in JavaScript helping, the software developer write the logic and functionality of her code.
+- In javascript, operators classified as `Arithmetic Operators`, `Assignment Operators`, `String Operators`, `Comparison Operators`, `Conditional (Ternary) Operator`, `Logical Operators`. Operators are the most useful elements in JavaScript helping, the software developer write the logic and functionality of her code.
 
 ### Arithmetic Operators
 
@@ -579,9 +579,84 @@ Example: \
 
 ## Statement
 
-### If Else Statement
+- In JavaScript we can weite code that will perform different depending of a logical condition. If the evaluated expression is true will perform one action and false another, when you have more than two options, you can use switch stament<sup>10</sup>.
+
+### If Else... Statement
+
+- `if statement` _executes a block of code only if the specified condition is `true`<sup>10</sup>_.
+- `if...else statement` _executes one block of code if the specified condition is `true` and another block of code if it is `false`<sup>10</sup>_.
+- `if...else if....else statement` _executes a combination multiple stament <sup>10</sup>_.
+
+```JS
+// basic if statement
+if(condition) {
+ // some code
+}
+// if else statement
+if(condition) {
+    // Code if condition is true
+} else {
+    // Code if condition is false
+}
+if(conditionA) {
+    // Code if conditionA is true
+} else if(conditionB) {
+    // Code  if the conditionB is false and conditionB is true
+} else {
+    // Code if both conditionA and conditionB are false
+}
+```
+
+```JS
+var x = 5;
+// basic if statement
+if (x == 5) {
+  console.log(`x is ${x}`);
+}
+
+var y = 10;
+// if / else statement
+if (y > 8) {
+  console.log(`y greater than 8`);
+} else {
+  console.log(`y less than 8`);
+}
+// if else if statement
+if (x > 8) {
+  console.log(`x greater than 8`);
+} else if (x == y) {
+  console.log(`x equal y`);
+} else {
+  console.log(`x is less than 8 and diff y`);
+}
+```
+
+Example: \
+![if statement](img/if_statement.gif)
+
+- Ternary operator replace if/else statement, this reduce the lines of code and it is easy to maintain
+
+```JS
+var age = 30;
+var whatSheGets;
+if (age >= 21) {
+  whatSheGets = "she drinks wine";
+} else {
+  whatSheGets = "she drinks milk";
+}
+console.log(whatSheGets);
+
+var age = 18;
+var whatSheGets = age >= 21 ? "she drinks wine" : "she drinks milk";
+console.log(whatSheGets);
+```
+
+Example: \
+![if statement](img/if_tern.gif)
 
 ### Switch statement
+
+- `switch statement` to select one of many code blocks to be executed.
 
 ## Loops
 
@@ -644,7 +719,7 @@ Example: \
 - Some Methods
   - `Math.round(x)` _returns the value of x rounded to its closest integer<sup>8</sup>_.
   - `Math.pow(x, y)` _returns the value of x to the power of y<sup>8</sup>_.
-  - `Math.sqrt(x)` returns the square root of x<sup>8</sup>\_.
+  - `Math.sqrt(x)` _returns the square root of x<sup>8</sup>_.
   - `Math.floor(x)` _returns the value of x rounded down to its closest integer<sup>8</sup>_.
   - `Math.ceil(x)` _returns rounded upwards to the closest integer<sup>8</sup>_.
   - `Math.max(x, y, z, ..., n)` _returns the number with the highest value<sup>8</sup>_.
@@ -714,6 +789,8 @@ Example: \
 1. https://www.w3schools.com/js/js_comparisons.asp
 1. https://www.w3schools.com/js/js_math.asp
 1. https://www.w3schools.com/js/js_json.asp
+1. https://www.tutorialrepublic.com/javascript-tutorial/javascript-if-else-statements.php
+1. https://www.w3schools.com/js/js_switch.asp
 
 # Tools
 
