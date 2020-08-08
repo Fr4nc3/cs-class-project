@@ -31,9 +31,7 @@ _"JavaScript is officially maintained by ECMA (European Computer Manufacturers A
     - [Switch statement](#switch-statement)
   - [Loops](#loops)
     - [For](#for)
-    - [For In](#for-in)
     - [While](#while)
-    - [Do While](#do-while)
   - [Globals](#globals)
     - [Global Properties](#global-properties)
     - [Global Functions](#global-functions)
@@ -710,13 +708,68 @@ Example: \
 
 ## Loops
 
+- `Loops` are the way JavaScript has to execute a block of code until a condition is met<sup>13</sup>.
+- `Loops` can execute a block of code a number of times. Software developer must ensure the loop finish or her application can run out of memory.
+
 ### For
 
-### For In
+- `for` is one of the most populars loops statement in JavaScript.
+- `for` can be used to loop through arrays or any other conditions.
+- `statement One` is the initial parameter to start the loop.
+- `statement two` declares the condition until the for loop runs.
+- `statement Three` executes at the end of each iteration.
+
+```JS
+for (statement One; statement two; statement Three) {
+  // code block
+}
+```
+
+```JS
+// for run intil i is less than 5
+for (var i = 0; i < 5; ++i) {
+  console.log(i);
+}
+var array = [1, 2, 3, 5];
+// for run until i is not greater than array length
+for (var i = 0; i < array.length; ++i) {
+  console.log(array[i]);
+}
+```
+
+Example: \
+![for loop](img/for_loop.gif)
 
 ### While
 
-### Do While
+- `while` loops through a block of code as long as the condition is `true`<sup>13</sup>.
+
+```JS
+while (condition) {
+  // code block
+  // must have condition break
+}
+```
+
+```JS
+// while run intil i is less than 5
+var i = 0;
+while (i < 5) {
+  console.log(i);
+  ++i; // i needs to increments or the condition never met
+}
+var array = [1, 2, 3, 5];
+// while run until i is not greater than array length
+i = 0;
+while (i < array.length) {
+  console.log(array[i]);
+  ++i; // i needs to increment or the loop will never end
+}
+
+```
+
+Example: \
+![for loop](img/while_loop.gif)
 
 ## Globals
 
@@ -802,10 +855,10 @@ Example: \
 
 - `JSON` means for (JavaScript Object Notation)<sup>9</sup>
 - `JSON` _is a format for storing and transporting data_<sup>9</sup>.
-- `JSON` is language independetn and its syntax is derived from JavaScript object notation syntax. However,`JSON` format is text only. Read and Write `JSON` data can be written in any programming language<sup>9</sup>.
-- `JSON` sintax is identical to a JavaScript objects. Moreover, a JavaScript can easily convert `JSON` data into native JavaScript objects.<sup>9</sup>.
+- `JSON` is language independent and its syntax is derived from JavaScript object notation syntax. However,`JSON` format is text only. Read and Write `JSON` data can be written in any programming language<sup>9</sup>.
+- `JSON` syntax is identical to a JavaScript objects. Moreover, a JavaScript can easily convert `JSON` data into native JavaScript objects.<sup>9</sup>.
 - `JSON.parse(text)` convert a string into JavaScript Object, if the string was storing a JSON dataset.
-- `JSON.stringify(obj);` convert a JavaScrpt Object into a JSON string.
+- `JSON.stringify(obj)` convert a JavaScrpt Object into a JSON string.
 
 ```JS
 var obj = {
@@ -826,7 +879,7 @@ Example: \
 
 # Conclusion
 
--
+- JavaScript has become one of the most popular programming language nowadays. Its syntax is simple and easy to follow. Moreover, when used for web applications, it is a lightweight, powerful tool to create dynamic sites that are easy to maintain and upgrade.
 
 # References
 
@@ -841,6 +894,8 @@ Example: \
 1. https://www.w3schools.com/js/js_json.asp
 1. https://www.tutorialrepublic.com/javascript-tutorial/javascript-if-else-statements.php
 1. https://www.w3schools.com/js/js_switch.asp
+1. https://www.w3schools.com/js/js_loop_for.asp
+1. https://www.w3schools.com/js/js_loop_while.asp
 
 # Tools
 
