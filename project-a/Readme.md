@@ -40,8 +40,7 @@ _"JavaScript is officially maintained by ECMA (European Computer Manufacturers A
     - [Global Objects](#global-objects)
       - [MATH](#math)
       - [JSON](#json)
-  - [DOM](#dom)
-  - [BOM](#bom)
+- [Conclusion](#conclusion)
 - [References](#references)
 - [Tools](#tools)
 - [Author](#author)
@@ -291,7 +290,7 @@ var emptyArray = [];
   - `pop()` remove the last element of the array
   - `shift()` remove the first element of the array
   - `unshift()` add an element on the beginning of the array
-  - `join()` merge the array into an string;
+  - `join()` merge the array into a string;
   - `typeof` an Array will return `object` and we need to use `Array.isArray()` to find if we are dealing with an Array
 
 ```JS
@@ -470,16 +469,37 @@ Example: \
 
 ### Logical Operators
 
-Table: \
+- These are used to determine the logic between variables or values.
+
+Table: when `x = 6`, `y = 3`\
 ![operator logic](img/op_logic.png)\
 <sub>courtesy of w3schools.com<sup>5</sup></sup>
+
+- `&&` both arguments need to be `true` then return `true`, otherwise, return `false`.
+- `||` if one of the argument is `true` then return `true`, if both of them are `false` return `false`.
+- `!` convert the boolean to the contrary, if argument is `true` return `false` and viceversa.
+
+```JS
+var x = 6;
+var y = 3;
+console.log("x < 10", x < 10);
+console.log("y > 1", y > 1);
+console.log("x < 10 && y > 1", x < 10 && y > 1);
+console.log("x == 5", x == 5);
+console.log("y > 2", y > 2);
+console.log("x == 6 || y > 2", x == 6 || y > 2);
+console.log("!(x == y)", !(x == y));
+```
+
+Example: \
+![operator logical](img/op_logic.gif)
 
 ## Objects
 
 - Objects are variables that can contain many values and these values are call properties.
 - values are written as pair of `name:value` AKA `key:value`.
 - `delete` remove property
-- An object can have functions as properties, to access other properties inside a object function, you need to use `this`. and `this` is the object itself.
+- An object can have `functions` as `properties`. To access other properties inside a object function, you need to use `this`. and `this` is the object itself.
 
 ```JS
 var obj = {
@@ -518,6 +538,38 @@ Example: \
 ## Functions
 
 - A function is a block of code that performs a task, it can be reused, and they are practical for not repeating code or creating a compact logic of code that is easy to read and organize.
+- A `function` is define by using the keyword function, then name of the functions.
+- A `function` can have pararemeters or not.
+- A `function` can `return` a value or execute and action (`void`).
+- A `function` can access global variables.
+- A `function` can have local variables that only exist when the function is invoked.
+
+```JS
+// function with no params and return
+function myFunction() {
+  return "hello";
+}
+console.log(myFunction());
+// function with no params and no return
+function myFunction2() {
+  console.log("hello2");
+}
+myFunction2();
+// function with params and return
+function myFunction3(x, y) {
+  return x + y;
+}
+console.log(myFunction3(1, 4));
+// function with params and no return
+function myFunction4(x, y) {
+  console.log("from myFunction: ", x + y);
+}
+
+myFunction4(5, 7);
+```
+
+Example: \
+![functions](img/functions.gif)
 
 ## Statement
 
@@ -584,20 +636,58 @@ Example: \
 ![Global Math](img/global_math.gif)
 
 - Some Methods
+  - `Math.round(x)` _returns the value of x rounded to its closest integer<sup>8</sup>_.
+  - `Math.pow(x, y)` _returns the value of x to the power of y<sup>8</sup>_.
+  - `Math.sqrt(x)` returns the square root of x<sup>8</sup>\_.
+  - `Math.floor(x)` _returns the value of x rounded down to its closest integer<sup>8</sup>_.
+  - `Math.ceil(x)` _returns rounded upwards to the closest integer<sup>8</sup>_.
+  - `Math.max(x, y, z, ..., n)` _returns the number with the highest value<sup>8</sup>_.
+  - `Math.min(x, y, z, ..., n)` _returns the number with the lowest value<sup>8</sup>_.
+  - `Math.random()` _returns a random number between 0 (inclusive), and 1 (exclusive)<sup>8</sup>_.
+
+```JS
+console.log(Math.round(5.6));
+console.log(Math.pow(5, 2));
+console.log(Math.sqrt(25));
+console.log(Math.floor(4.5));
+console.log(Math.floor(4.7));
+console.log(Math.floor(4.3));
+console.log(Math.ceil(4.5));
+console.log(Math.ceil(4.7));
+console.log(Math.ceil(4.3));
+console.log(Math.max(4, 10));
+console.log(Math.min(4, 10));
+console.log(Math.random());
+```
+
+Example: \
+![Math Methods](img/math_methods.gif)
 
 #### JSON
 
-## DOM
-
-## BOM
+- `JSON` means for (JavaScript Object Notation)<sup>9</sup>
+- `JSON` _is a format for storing and transporting data_<sup>9</sup>.
+- `JSON` is language independetn and its syntax is derived from JavaScript object notation syntax. However,`JSON` format is text only. Read and Write `JSON` data can be written in any programming language<sup>9</sup>.
+- `JSON` sintax is identical to a JavaScript objects. Moreover, a JavaScript can easily convert `JSON` data into native JavaScript objects.<sup>9</sup>.
+- `JSON.parse(text)` convert a string into JavaScript Object, if the string was storing a JSON dataset.
+- `JSON.stringify(obj);` convert a JavaScrpt Object into a JSON string.
 
 ```JS
-
+var obj = {
+  firstName: "Francia",
+  lastName: "Riesco",
+  age: 30,
+};
+var flatObject = JSON.stringify(obj);
+console.log(flatObject);
+var parsedObject = JSON.parse(flatObject);
+console.log(parsedObject);
 ```
 
-```JS
+Example: \
+![JSON](img/json_obj.gif)
 
-```
+# Conclusion
 
 # References
 
@@ -607,6 +697,9 @@ Example: \
 1. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null
 1. https://www.w3schools.com/jsref/jsref_operators.asp
 1. https://www.w3schools.com/jsref/jsref_obj_global.asp
+1. https://www.w3schools.com/js/js_comparisons.asp
+1. https://www.w3schools.com/js/js_math.asp
+1. https://www.w3schools.com/js/js_json.asp
 
 # Tools
 
