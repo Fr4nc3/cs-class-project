@@ -1,7 +1,7 @@
 ![JavaScript Logo](https://www.tutorialrepublic.com/lib/images/javascript-illustration.png)\
 <sub>JavaScript Logo by tutorialrepublic.com</sub>
 
-# The 12 Concepts about JavaScript
+# The 10 Concepts about JavaScript
 
 JavaScript is one of the most popular languages globally, and it is most commonly used as the language that handles and renders dynamic features to the web pages on a web browser. In was created by Netscape in 1995 and standardized in 1997. Nowadays, JavaScript is the standard language for web applications and is supported by web-browsers such as Firefox, Safari, Chrome, and Edge, among others.
 
@@ -9,7 +9,7 @@ _"JavaScript is officially maintained by ECMA (European Computer Manufacturers A
 
 **Table of Contents**
 
-- [The 12 Concepts about JavaScript](#the-12-concepts-about-javascript)
+- [The 10 Concepts about JavaScript](#the-10-concepts-about-javascript)
   - [Variables](#variables)
     - [var, let, and const](#var-let-and-const)
     - [typeof](#typeof)
