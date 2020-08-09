@@ -121,7 +121,7 @@ Example: \
 
 ### Null and Undefined
 
-- In javascript, when a variable is `null` is the absence of any value in the variable or object. Moreover, it is treated as false of boolean operations. In the same way, a variable is `undefined` when it has been declared, but not defined. Similar to `null`, `undefined` is treated as false for boolean operations.
+- In javascript, when a variable is `null` is the absence of any value in the variable or object. Moreover, it is treated as `false` of boolean operations. In the same way, a variable is `undefined` when it has been declared, but not defined. Similar to `null`, `undefined` is treated as `false` for boolean operations.
 
 ```JS
 var example = null;
@@ -190,7 +190,7 @@ Example: \
 
 - A string variable has several methods associates and the more relevant are:
   - `indexOf()` that return the index position of a specific text, it return `-1` if the text is not found.
-  - `includes()` return a true if the text is part of the string, false if it doesnt't
+  - `includes()` return a `true` if the text is part of the string, `false` if it doesnt't
   - `split(separator)` return and array from the string.
   - `slice(start, end)` it will extract a part of the string
 
@@ -271,7 +271,7 @@ Example: \
 
 ## Arrays
 
-- Arrays variables thay can store multiples values. In JavaScript, an array can store different type of values in the same array.
+- Array are variables that can store multiples values. In JavaScript, an array can store different type of values in the same array.
 
 ```JS
 var strArray = ["Spain", "Brazil", "Argentina", "U.K."]; // create array with 4 elements
@@ -577,7 +577,7 @@ Example: \
 
 ## Statement
 
-- In JavaScript we can write code that will perform different depending of a logical condition. If the evaluated expression is `true` will perform one action and false another, when you have more than two options, you can use switch stament<sup>10</sup>.
+- In JavaScript we can write code that will perform different depending of a logical condition. If the evaluated expression is `true` will perform one action and `false` another, when you have more than two options, you can use switch stament<sup>10</sup>.
 
 ### If Else... Statement
 
@@ -657,7 +657,7 @@ Example: \
 ### Switch statement
 
 - `switch statement` to select one of many code blocks to be executed.
-- `break` is used to single out each case block (other blocks are executed);
+- `break` is used to single out each case block (other blocks are not executed);
 - `default` is the last expression and it is executes if nothing else matched
 
 ```JS
@@ -855,7 +855,7 @@ Example: \
 
 #### JSON
 
-- `JSON` means for (JavaScript Object Notation)<sup>9</sup>
+- `JSON` means JavaScript Object Notation<sup>9</sup>
 - `JSON` _is a format for storing and transporting data_<sup>9</sup>.
 - `JSON` is language independent and its syntax is derived from JavaScript object notation syntax. However,`JSON` format is text only. Read and Write `JSON` data can be written in any programming language<sup>9</sup>.
 - `JSON` syntax is identical to a JavaScript objects. Moreover, a JavaScript can easily convert `JSON` data into native JavaScript objects.<sup>9</sup>.
